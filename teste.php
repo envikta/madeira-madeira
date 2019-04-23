@@ -3,7 +3,7 @@
 require_once 'vendor/autoload.php'
 
 // Criar o objeto de envio
- $produto = new MadeiraMaderia\Marketplace\Dominio\Produto\Produto();
+ $produto = new MadeiraMadeira\Marketplace\Dominio\Produto\Produto();
  $produto->setSku('15586');
  $produto->setNome('Suporte de Parede Articulado ELG para TV de 50" a 60" F500 Preto');
  $produto->setDescricao('Suporte de Parede Articulado ELG para TV de 50" a 60" F500 Preto excelente para sua bla');
@@ -33,7 +33,7 @@ $produto->addAtributo('Suporte - Regulagem de Altura', 'Sim');
 $produto->addAtributo('Suporte - Compatibilidade', 'TVs Plasma/3D/LCD/LED;');
 $produto->addAtributo('Suporte - Carga Máxima', 'Suporta Até 14 a 23 kg para Cada TV;');
 
-$lote = new MadeiraMaderia\Marketplace\Dominio\Lote();
+$lote = new MadeiraMadeira\Marketplace\Dominio\Lote();
 $lote->add($produto);
 $sender = $this->getSender();
 $envio = $sender->enviarProdutoLote($lote);
